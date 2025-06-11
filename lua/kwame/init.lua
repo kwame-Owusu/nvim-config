@@ -1,2 +1,2 @@
 require("kwame.remap")
-print("hello from kwame")
+require("kwame.settings")

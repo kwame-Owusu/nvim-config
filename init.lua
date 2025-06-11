@@ -1,8 +1,4 @@
 require("kwame")
-print("hello")
-
-vim.wo.relativenumber = true
-vim.opt.number = true  -- ensures the absolute number is shown for the current line
 
 
 
