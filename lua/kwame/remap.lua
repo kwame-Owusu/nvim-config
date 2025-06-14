@@ -18,6 +18,7 @@ vim.keymap.set("n", "<leader>zig", "<cmd>LspRestart<cr>")
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set("n", "<leader>w", ":w<CR>") --allowing us to save a bit easier
+vim.keymap.set("n", "<leader>q", ":q<CR>") --allowing us to quit a bit easier
 
 
 -- next greatest remap ever : asbjornHaland
