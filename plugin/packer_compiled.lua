@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/home/kwame/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
     url = "https://github.com/rebelot/kanagawa.nvim"
   },
+  ["live-preview.nvim"] = {
+    loaded = true,
+    path = "/home/kwame/.local/share/nvim/site/pack/packer/start/live-preview.nvim",
+    url = "https://github.com/brianhuster/live-preview.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/kwame/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",

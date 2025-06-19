@@ -21,6 +21,13 @@ return require('packer').startup(function(use)
 	  'nvim-treesitter/nvim-treesitter',
 	  run = ':TSUpdate'
   })
+-- preview of html files and similar 
+  use {
+        'brianhuster/live-preview.nvim',
+        requires = {
+            'nvim-telescope/telescope.nvim',
+        },
+    }
 
   use {'ThePrimeagen/harpoon'}
   use {'mbbill/undotree'}
