@@ -29,6 +29,27 @@ return require('packer').startup(function(use)
         },
     }
 
+    --code formatter configuration
+    use {
+        'stevearc/conform.nvim',
+        config = function()
+            require("conform").setup({
+                formatters_by_ft = {
+                    python = { "black" },
+                    javascript = { "prettier" },
+                    typescript = { "prettier" },
+                    html = { "prettier" },
+                    css = { "prettier" },
+                    go = { "gofmt" },
+                },
+                format_on_save = {
+                    timeout_ms = 500,
+                    lsp_fallback = true,
+                },
+            })
+        end
+    }
+
   use {'ThePrimeagen/harpoon'}
   use {'mbbill/undotree'}
   use {'tpope/vim-fugitive'}
