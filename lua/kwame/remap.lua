@@ -20,6 +20,10 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set("n", "<leader>w", ":w<CR>") --allowing us to save a bit easier
 vim.keymap.set("n", "<leader>q", ":q<CR>") --allowing us to quit a bit easier
 
+-- remaps for using LivePreview commands, mainly for starting and closing servers
+vim.keymap.set("n", "<leader>ls", ":LivePreview start<CR>") --start live server
+vim.keymap.set("n", "<leader>lc", ":LivePreview close<CR>") --close live server
+
 
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
@@ -32,6 +36,7 @@ vim.keymap.set("i", "jk", "<Esc>")
 vim.keymap.set("v", "jk", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
+vim.keymap.set("n", "s", "<nop>") --needed for live preview
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<leader>f", function()
     require("conform").format({ bufnr = 0 })
