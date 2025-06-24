@@ -41,6 +41,7 @@ return require('packer').startup(function(use)
                     html = { "prettier" },
                     css = { "prettier" },
                     json = { "prettier" },
+                    markdown = { "prettier" },
                     go = { "gofmt" },
                 },
                 format_on_save = {
