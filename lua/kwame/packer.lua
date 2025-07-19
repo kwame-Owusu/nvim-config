@@ -28,6 +28,14 @@ return require('packer').startup(function(use)
             'nvim-telescope/telescope.nvim',
         },
     }
+    -- nvim autopairs to pair brackets and similar
+    use {
+        "windwp/nvim-autopairs",
+        event = "InsertEnter",
+        config = function()
+            require("nvim-autopairs").setup {}
+        end
+    }
 
     --code formatter configuration
     use {
