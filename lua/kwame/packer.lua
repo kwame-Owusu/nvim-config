@@ -62,6 +62,12 @@ return require('packer').startup(function(use)
 
     use { 'ThePrimeagen/harpoon' }
     use { 'mbbill/undotree' }
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons',
+        },
+    }
     use { 'tpope/vim-fugitive' }
     use {
         'VonHeikemen/lsp-zero.nvim',

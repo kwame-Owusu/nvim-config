@@ -1,6 +1,10 @@
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>pf', builtin.find_files, { desc = 'Telescope find files' })
 vim.keymap.set('n', '<C-p>', builtin.git_files, { desc = 'Telescope find Git files' })
-vim.keymap.set('n', '<leader>ps', function()
-	builtin.grep_string({ search = vim.fn.input("Grep > ") })
-end)
+-- Live grep (updates as you type)
+vim.keymap.set('n', '<leader>ps', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>pw', function()
+    builtin.grep_string({ search = vim.fn.input("Grep > ") })
+end, { desc = 'Telescope grep string' })
+-- search for word under cursor across project
+vim.keymap.set('n', '<leader>pws', builtin.grep_string, { desc = 'Telescope grep word under cursor' })
