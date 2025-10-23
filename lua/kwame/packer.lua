@@ -12,11 +12,17 @@ return require('packer').startup(function(use)
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
-    use { 'sainnhe/everforest' }
-    use { 'sainnhe/gruvbox-material' }
-    use { 'morhetz/gruvbox' }
-    use { "rebelot/kanagawa.nvim" }
     use { "catppuccin/nvim", as = "catppuccin" }
+    use { "rebelot/kanagawa.nvim" }
+    use({
+        "sainnhe/everforest",
+        as = "everforest",
+        config = function()
+            vim.g.everforest_background = 'medium'
+            vim.g.everforest_transparent_background = 1
+            vim.cmd("colorscheme everforest")
+        end
+    })
     use({
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
