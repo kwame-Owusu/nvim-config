@@ -93,4 +93,20 @@ return require('packer').startup(function(use)
         -- install jsregexp (optional!:).
         run = "make install_jsregexp"
     })
+    --alpha config for the dashboard
+    use {
+        'goolord/alpha-nvim',
+        requires = {
+            'echasnovski/mini.icons',
+            'nvim-lua/plenary.nvim'
+        },
+        config = function()
+            require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
+        end
+    }
+
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 end)
