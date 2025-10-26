@@ -19,6 +19,7 @@ dashboard.section.header.val = {
     [[                                                                       ]],
 }
 
+dashboard.section.header.opts.hl = "String" -- sets ascii art to green
 dashboard.section.buttons.val = {
     dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
     dashboard.button("f", "󰍉  Find file", ":Telescope find_files<CR>"),
