@@ -12,6 +12,9 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
+-- search settings
+vim.opt.ignorecase = true
+vim.opt.smartcase = false
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
@@ -22,6 +25,8 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
+
+vim.opt.clipboard:append("unnamedplus")
 
 
 vim.g.mapleader = " "

@@ -14,6 +14,20 @@ vim.keymap.set("n", "N", "Nzzzv") --when searching for things keep cursor in mid
 vim.keymap.set("n", "=ap", "ma=ap'a")
 vim.keymap.set("n", "<leader>zig", "<cmd>LspRestart<cr>")
 
+-- splitting & resizing
+vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", { desc = "split window vertically" })
+vim.keymap.set("n", "<leader>sh", ":split<CR>", { desc = "increase window height" })
+vim.keymap.set("n", "<C-Up>", ":resize +2<CR>", { desc = "decrease window height" })
+vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", { desc = "decrease window width" })
+vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { desc = "increase window width" })
+
+-- better window navigation
+vim.keymap.set("n", "<C-h>", "<C-w>h")
+vim.keymap.set("n", "<C-j>", "<C-w>j")
+vim.keymap.set("n", "<C-k>", "<C-w>k")
+vim.keymap.set("n", "<C-l>", "<C-w>l")
+
+
 
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
@@ -42,8 +56,8 @@ vim.keymap.set("n", "<leader>f", function()
     require("conform").format({ bufnr = 0 })
 end)
 
-vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
+vim.keymap.set("n", "<C-cK>", "<cmd>cnext<CR>zz")
+vim.keymap.set("n", "<C-cJ>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
