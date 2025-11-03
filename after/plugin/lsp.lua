@@ -15,7 +15,7 @@ lsp_zero.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader>vca", vim.lsp.buf.code_action, opts)
     vim.keymap.set("n", "<leader>vrr", vim.lsp.buf.references, opts)
     vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, opts)
-    vim.keymap.set("n", "<C-sh>", vim.lsp.buf.signature_help, opts)
+    vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
 end)
 
 -- Mason setup
@@ -68,6 +68,18 @@ cmp.setup({
             require('luasnip').lsp_expand(args.body)
         end,
     },
+})
+
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+vim.lsp.config("ts_ls", {
+    capabilities = capabilities
+})
+vim.lsp.config("html", {
+    capabilities = capabilities
+})
+vim.lsp.config("lua_ls", {
+    capabilities = capabilities
 })
 
 -- Diagnostics config

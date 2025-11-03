@@ -48,8 +48,8 @@ require("lualine").setup({
         },
         section_separators = { left = round.right, right = round.left },
         disabled_filetypes = {
-            statusline = {},
-            winbar = {},
+            statusline = { "alpha" },
+            winbar = {}
         },
         ignore_focus = {},
         always_divide_middle = true,
