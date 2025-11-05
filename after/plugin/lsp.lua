@@ -81,6 +81,21 @@ vim.lsp.config("html", {
 vim.lsp.config("lua_ls", {
     capabilities = capabilities
 })
+vim.lsp.config("gopls", {
+    capabilities = capabilities,
+    cmd = { "gopls" },
+    filetypes = { "go", "mod", "gowork", "gotmpl" },
+    settings = {
+        gopls = {
+            completeUnimported = true,
+            analyses = {
+                unusedparams = true
+            }
+        }
+    }
+})
+
+
 
 -- Diagnostics config
 vim.diagnostic.config({
