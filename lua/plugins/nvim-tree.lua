@@ -33,25 +33,6 @@ return {
       highlight NvimTreeVertSplit guibg=NONE ctermbg=NONE
     ]])
 
-    -- Smart toggle function
-    local function smart_nvimtree_toggle()
-      local api = require("nvim-tree.api")
-      local view = require("nvim-tree.view")
-
-      if not view.is_visible() then
-        api.tree.find_file({ open = true, focus = true })
-      else
-        -- Tree open
-        if vim.bo.filetype == "NvimTree" then
-          -- Focus is on the tree → close it
-          api.tree.close()
-        else
-          -- Focus is elsewhere → focus the tree instead of reopening
-          api.tree.focus()
-        end
-      end
-    end
-
-    vim.keymap.set("n", "<C-n>", smart_nvimtree_toggle, { desc = "Smart toggle NvimTree" })
+    vim.keymap.set("n", "<c-n>", ":NvimTreeFindFileToggle<CR>")
   end,
 }

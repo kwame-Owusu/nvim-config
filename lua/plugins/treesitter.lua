@@ -1,6 +1,7 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate",  -- ensures parsers stay updated
+  build = ":TSUpdate",
+  event = { "BufReadPost", "BufNewFile" },
   config = function()
     require("nvim-treesitter.configs").setup({
       -- Parsers to install
@@ -20,9 +21,7 @@ return {
 
       -- Install parsers synchronously
       sync_install = false,
-
-      -- Automatically install missing parsers when entering buffer
-      auto_install = true,
+      auto_install = false,
 
       highlight = {
         enable = true,

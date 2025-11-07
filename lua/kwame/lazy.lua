@@ -43,19 +43,6 @@
         },
         { "catppuccin/nvim",      name = "catppuccin" },
         { "rebelot/kanagawa.nvim" },
-        ({
-            "sainnhe/everforest",
-            name = "everforest",
-            config = function()
-                vim.g.everforest_background = 'medium'
-                vim.g.everforest_transparent_background = 1
-                vim.cmd("colorscheme everforest")
-            end
-        }),
-        ({
-            'nvim-treesitter/nvim-treesitter',
-            build = ':TSUpdate'
-        }),
         -- preview of html files and similar
         {
             'brianhuster/live-preview.nvim',
