@@ -1,7 +1,10 @@
 return {
   "nvim-tree/nvim-tree.lua",
-  dependencies = { "nvim-tree/nvim-web-devicons" },
-
+  version = "*",
+  lazy = false,
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+  },
   config = function()
     vim.g.loaded_netrw = 1
     vim.g.loaded_netrwPlugin = 1
@@ -33,6 +36,6 @@ return {
       highlight NvimTreeVertSplit guibg=NONE ctermbg=NONE
     ]])
 
-    vim.keymap.set("n", "<c-n>", ":NvimTreeFindFileToggle<CR>")
+    vim.keymap.set("n", "<C-n>", ":NvimTreeFindFileToggle<CR>")
   end,
 }
