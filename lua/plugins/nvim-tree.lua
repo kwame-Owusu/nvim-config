@@ -8,13 +8,12 @@ return {
     config = function()
         vim.g.loaded_netrw = 1
         vim.g.loaded_netrwPlugin = 1
-        vim.opt.termguicolors = true
 
         require("nvim-tree").setup({
             renderer = {
                 highlight_git = true,
                 highlight_opened_files = "none",
-                root_folder_modifier = ":~",
+                root_folder_label = false,
             },
             view = {
                 side = "left",
