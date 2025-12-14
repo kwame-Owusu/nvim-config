@@ -21,6 +21,7 @@ return {
             },
             filters = {
                 dotfiles = false,
+                custom = { "^.git$" },
             },
             git = {
                 enable = true,
