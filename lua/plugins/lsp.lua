@@ -33,7 +33,7 @@ return {
             keymap("n", "<leader>vca", vim.lsp.buf.code_action, opts)
             keymap("n", "<leader>vrr", vim.lsp.buf.references, opts)
             keymap("n", "<leader>vrn", vim.lsp.buf.rename, opts)
-            keymap("n", "<C-k>", vim.lsp.buf.signature_help, opts)
+            keymap("n", "<C-sk>", vim.lsp.buf.signature_help, opts)
         end)
 
         -- Mason setup
