@@ -38,6 +38,14 @@ vim.keymap.set("n", "<leader>q", ":q<CR>") --allowing us to quit a bit easier
 vim.keymap.set("n", "<leader>ls", ":LivePreview start<CR>") --start live server
 vim.keymap.set("n", "<leader>lc", ":LivePreview close<CR>") --close live server
 
+-- bindings for gopher.nvim
+vim.keymap.set("n", "<leader>gsj", ":GoTagAdd json<CR>", { desc = "add json tags to structs" })
+vim.keymap.set("n", "<leader>gsy", ":GoTagAdd yaml<CR>", { desc = "add yaml tags to structs" })
+vim.keymap.set("n", "<leader>gmt", ":GoMod tidy<CR>", { desc = "updates our dependencies in go.mod" })
+vim.keymap.set("n", "<leader>gie", ":GoIfErr <CR>", { desc = "auto generate if err blocks" })
+vim.keymap.set("n", "<leader>ggg", ":GoGet <CR>", { desc = "add a package to project" })
+
+
 
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
