@@ -48,6 +48,7 @@ return {
                 "html",
                 "cssls",
                 "clangd",
+                "rust_analyzer",
             },
             handlers = {
                 lsp_zero.default_setup,

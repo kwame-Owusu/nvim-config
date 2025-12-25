@@ -20,8 +20,10 @@ return {
                 "python",
                 "css",
                 "json",
+                "toml",
                 "yaml",
                 "tsx",
+                "rust",
             },
 
             -- Install parsers synchronously
