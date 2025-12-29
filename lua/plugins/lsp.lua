@@ -95,10 +95,15 @@ return {
             },
         })
 
+        vim.lsp.enable("astro")
+
         -- Capabilities
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
         vim.lsp.config("ts_ls", {
+            capabilities = capabilities
+        })
+        vim.lsp.config("astro", {
             capabilities = capabilities
         })
         vim.lsp.config("html", {

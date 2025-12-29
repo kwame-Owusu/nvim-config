@@ -24,6 +24,7 @@ return {
                 "yaml",
                 "tsx",
                 "rust",
+                "astro",
             },
 
             -- Install parsers synchronously
