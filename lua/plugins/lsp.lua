@@ -96,6 +96,7 @@ return {
         })
 
         vim.lsp.enable("astro")
+        vim.lsp.enable("postgres_lsp")
 
         -- Capabilities
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -110,6 +111,9 @@ return {
             capabilities = capabilities
         })
         vim.lsp.config("lua_ls", {
+            capabilities = capabilities
+        })
+        vim.lsp.config("postgres_lsp", {
             capabilities = capabilities
         })
         vim.lsp.config("gopls", {
