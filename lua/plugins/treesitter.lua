@@ -1,10 +1,11 @@
 return {
     "nvim-treesitter/nvim-treesitter",
+    branch = "master",
     build = ":TSUpdate",
     event = { "BufReadPost", "BufNewFile" },
     lazy = false,
     config = function()
-        require("nvim-treesitter.config").setup({
+        require("nvim-treesitter.configs").setup({
             -- Parsers to install
             ensure_installed = {
                 "c",
