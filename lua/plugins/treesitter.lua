@@ -4,7 +4,7 @@ return {
     event = { "BufReadPost", "BufNewFile" },
     lazy = false,
     config = function()
-        require("nvim-treesitter.configs").setup({
+        require("nvim-treesitter.config").setup({
             -- Parsers to install
             ensure_installed = {
                 "c",
