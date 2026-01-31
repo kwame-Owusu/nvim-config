@@ -41,10 +41,11 @@ vim.keymap.set("n", "<leader>lc", ":LivePreview close<CR>") --close live server
 
 -- bindings for gopher.nvim
 vim.keymap.set("n", "<leader>gsj", ":GoTagAdd json<CR>", { desc = "add json tags to structs" })
+vim.keymap.set("n", "<leader>gsjr", ":GoTagRm json<CR>", { desc = "remove json tags to structs" })
 vim.keymap.set("n", "<leader>gsy", ":GoTagAdd yaml<CR>", { desc = "add yaml tags to structs" })
+vim.keymap.set("n", "<leader>gsyr", ":GoTagAdd yaml<CR>", { desc = "remove yaml tags to structs" })
 vim.keymap.set("n", "<leader>gmt", ":GoMod tidy<CR>", { desc = "updates our dependencies in go.mod" })
 vim.keymap.set("n", "<leader>gie", ":GoIfErr <CR>", { desc = "auto generate if err blocks" })
-vim.keymap.set("n", "<leader>ggg", ":GoGet <CR>", { desc = "add a package to project" })
 
 
 
