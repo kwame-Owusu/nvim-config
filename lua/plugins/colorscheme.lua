@@ -56,4 +56,30 @@ return {
             })
         end,
     },
+
+    {
+        "Yazeed1s/oh-lucy.nvim",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            -- These MUST be set here so they are ready when
+            -- you switch to the theme via Themery
+            vim.g.oh_lucy_italic_comments = true
+            vim.g.oh_lucy_italic_keywords = true
+            vim.g.oh_lucy_transparent_background = true
+        end,
+    },
+    {
+        'olivercederborg/poimandres.nvim',
+        lazy = false,
+        priority = 1000,
+        config = function()
+            require('poimandres').setup {
+                -- leave this setup function empty for default config
+                -- or refer to the configuration section
+                -- for configuration options
+            }
+        end,
+
+    }
 }
