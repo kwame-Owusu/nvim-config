@@ -3,7 +3,7 @@ return {
     lazy = false,
     config = function()
         require("themery").setup({
-            themes = { "gruvbox", "koda", "everforest", "oh-lucy", "poimandres" },
+            themes = { "gruvbox", "koda", "everforest", "oh-lucy", "poimandres", "rose-pine" },
             livePreview = true,
         })
     end
