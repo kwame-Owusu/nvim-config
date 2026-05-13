@@ -89,7 +89,8 @@ return {
         name = "rose-pine",
         config = function()
             require('rose-pine').setup({
-                variant = 'main',
+                variant = 'moon',
+                extend_background_behind_borders = true,
                 styles = {
                     bold = false,
                     italic = false,
