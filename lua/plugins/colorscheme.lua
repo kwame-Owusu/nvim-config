@@ -45,15 +45,15 @@ return {
     },
 
     {
-        "neanias/everforest-nvim",
+        "sainnhe/everforest",
         version = false,
         lazy = false,
         priority = 1000,
         config = function()
-            require("everforest").setup({
-                background = "hard", -- options: "low", "medium", "hard"
-                transparent_background_level = 1,
-            })
+            vim.g.everforest_background = "hard" -- "hard", "medium", "soft"
+            vim.g.everforest_transparent_background = 1
+            vim.g.everforest_enable_italic = 0
+            vim.g.everforest_disable_italic_comment = 1
         end,
     },
 
