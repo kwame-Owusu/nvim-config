@@ -2,6 +2,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     branch = "main",
     build = ":TSUpdate",
+    lazy = false,
     config = function()
         local parsers = {
             "c", "javascript", "typescript", "lua", "vim",
