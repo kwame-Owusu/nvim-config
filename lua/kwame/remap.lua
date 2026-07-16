@@ -56,8 +56,15 @@ vim.keymap.set("n", "<leader>t", ":Themery <CR>", { desc = "open themery buffer"
 
 
 -- barbar key mappings
-vim.keymap.set("n", "<A-,>", "<Cmd>BufferPrevious<CR>")
-vim.keymap.set("n", "<A-.>", "<Cmd>BufferNext<CR>")
+vim.keymap.set("n", "<A-,>", "<Cmd>BufferPrevious<CR>", { desc = "move to previous" })
+vim.keymap.set("n", "<A-.>", "<Cmd>BufferNext<CR>", { desc = "move to next" })
+vim.keymap.set("n", "<A-<>", "<Cmd>BufferMovePrevious<CR>", { desc = "reoder to previous" })
+vim.keymap.set("n", "<A->>", "<Cmd>BufferMoveNext<CR>", { desc = "reoder to next" })
+vim.keymap.set("n", "<A-1>", "<Cmd>BufferGoto 1<CR>")
+vim.keymap.set("n", "<A-2>", "<Cmd>BufferGoto 2<CR>")
+vim.keymap.set("n", "<A-3>", "<Cmd>BufferGoto 3<CR>")
+vim.keymap.set("n", "<A-4>", "<Cmd>BufferGoto 4<CR>")
+vim.keymap.set("n", "<A-5>", "<Cmd>BufferGoto 5<CR>")
 
 
 -- next greatest remap ever : asbjornHaland
