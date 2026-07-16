@@ -65,6 +65,8 @@ vim.keymap.set("n", "<A-2>", "<Cmd>BufferGoto 2<CR>")
 vim.keymap.set("n", "<A-3>", "<Cmd>BufferGoto 3<CR>")
 vim.keymap.set("n", "<A-4>", "<Cmd>BufferGoto 4<CR>")
 vim.keymap.set("n", "<A-5>", "<Cmd>BufferGoto 5<CR>")
+vim.keymap.set("n", "<A-c>", "<Cmd>BufferClose<CR>")
+
 
 
 -- next greatest remap ever : asbjornHaland
