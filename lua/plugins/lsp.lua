@@ -44,6 +44,7 @@ return {
                 "lua_ls",
                 "eslint",
                 "pyright",
+                "ruff",
                 "gopls",
                 "html",
                 "cssls",
@@ -60,6 +61,9 @@ return {
                             },
                         },
                     })
+                end,
+                ruff = function()
+                    require("lspconfig").ruff.setup({})
                 end,
             },
         })

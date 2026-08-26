@@ -4,7 +4,7 @@ return {
   config = function()
     require("conform").setup({  -- Changed from init to setup
       formatters_by_ft = {
-        python = { "black" },
+        python = { "ruff_format" },
         javascript = { "prettier" },
         typescript = { "prettier" },
         html = { "prettier" },
