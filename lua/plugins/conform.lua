@@ -5,6 +5,8 @@ return {
     require("conform").setup({  -- Changed from init to setup
       formatters_by_ft = {
         python = { "ruff_format" },
+        cpp = { "clang_format" },
+        c = { "clang_format" },
         javascript = { "prettier" },
         typescript = { "prettier" },
         html = { "prettier" },

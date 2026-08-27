@@ -5,7 +5,7 @@ return {
     lazy = false,
     config = function()
         local parsers = {
-            "c", "javascript", "typescript", "lua", "vim",
+            "c", "cpp", "javascript", "typescript", "lua", "vim",
             "html", "vimdoc", "query", "markdown", "markdown_inline",
             "go", "python", "css", "json", "toml", "yaml",
             "tsx", "rust", "astro",
