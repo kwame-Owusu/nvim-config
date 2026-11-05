@@ -56,9 +56,6 @@ return {
                 sections = 0,
                 styles = 1,
             }
-
-            -- Use <localleader> = "," in tex files (default is "\")
-            vim.g.maplocalleader = ","
         end,
         config = function()
             -- Open the PDF automatically the first time you start compiling
